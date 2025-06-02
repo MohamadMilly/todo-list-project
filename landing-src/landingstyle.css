@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poetsen+One&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+body {
+    height:100vh;
+    font-family:"Cal Sans";
+}
+
+
+header {
+text-align: center;
+padding:20vh 10px;
+position: relative;
+
+}
+
+header::after , header::before {
+    content : '';
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+header::before {
+    clip-path:circle(30% at left 20%);
+    opacity:0.4;
+    background-image: linear-gradient(135deg,#5985E1,rgb(205, 202, 202));
+}
+
+header::after {
+    opacity:0.6;
+    clip-path:circle(25% at right 80%);
+    background-image: linear-gradient(135deg,#5985E1,rgb(205, 202, 202));
+}
+
+header > h2 {
+    font-size:48px;
+    padding-bottom:15px;
+}
+
+.text {
+    color:rgb(69, 69, 69);
+    font-size:17px;
+    text-wrap:balance;
+}
+
+.entry-button {
+ background-color:rgb(49, 49, 255);
+ padding:5px 15px;
+ border-radius:20px;
+ color:white;
+ outline:none;
+ display:inline-block;
+ margin-top:20px;
+ text-decoration: none;
+ 
+}
+
+.entry-button:hover {
+ background-color:rgb(38, 38, 171);
+}
+
+/* Features Section */ 
+
+.features-section {
+text-align: center;
+padding:20px 0px;
+
+}
+
+
+.features {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    row-gap:20px;
+    margin:0 auto;
+    width:80%;
+}
+
+.feature {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:5px;
+    
+}
+
+summary {
+ margin:5px;
+}
+
+/* instraction section */
+
+.instractions-section {
+padding:30px 50px;
+display:flex;
+flex-direction: column;
+gap:20px;
+
+}
+
+
+
+.instraction {
+ height:200px;
+ box-shadow:2px 2px 3px 1px rgba(0,0,0,0.2);
+ display:flex;
+ flex-direction: column;
+ justify-content: center;
+ padding:0px 30px;
+ border-radius:20px;
+ gap:5px;
+    border-left:5px solid #5985E1 ;
+    
+} 
+
+.instraction > div > h2 {
+    background:linear-gradient(135deg,#7394da,rgb(10, 10, 47));
+    background-clip: text ;
+    color:transparent;
+}
+
+.instraction:hover {
+ transform:scale(1.01);
+ transition: transform 0.3s ease;
+
+}
+
+/* entry */
+
+.entry {
+ 
+ margin:30px 2rem;
+ display:flex;
+ padding:40px 30px;
+ justify-content: space-between;
+ box-shadow:2px 2px 5px 2px rgba(0,0,0,0.1);
+ border-radius:200px;
+ align-items: center;
+ background-image: radial-gradient(rgb(245, 245, 245),white);
+}
+
+.entry > a {
+    margin:0;
+}
+
+/*footer*/ 
+
+footer {
+    padding:50px;
+    text-align: center;
+    background-color:rgb(24, 24, 24);
+    color:white;
+}
+
+@media (max-width:768px) {
+    .entry {
+        flex-direction: column;
+        align-items: center;
+        gap:20px;
+    }
+    .entry > div {
+        text-align: center;
+    }
+}
+
+
+
+
